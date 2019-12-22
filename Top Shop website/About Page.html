@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="C:\Users\Aliyu Ismaila\Documents\www.w3schools.com\www.w3schools.com\lib\w3.css">
+<header class="w3-container">
+<img src="Screenshot_20190730-114022_Chrome.jpg"
+alt="Car" width="300" height="150">
+<script
+src="https://kit.fontawesome.com/91abac0ed8.js" crossorigin="anonymous">
+</script>
+</header>
+<style>
+.center{
+  display:block;
+  margin-left:auto;
+  margin-right:auto;}
+
+  .hovereffect {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+  }
+
+  .hovereffect .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+  }
+
+  .hovereffect img {
+    display: block;
+    position: relative;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
+
+  .hovereffect:hover img {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.7" /><feFuncG type="linear" slope="0.7" /><feFuncB type="linear" slope="0.7" /></feComponentTransfer></filter></svg>#filter');
+    filter: brightness(0.7);
+    -webkit-filter: brightness(0.7);
+  }
+
+  .hovereffect h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    font-size: 17px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .hovereffect:hover h2 {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translate3d(-50%,-50%,0) scale3d(0.8,0.8,1);
+    transform: translate3d(-50%,-50%,0) scale3d(0.8,0.8,1);
+  }
+
+  .hovereffect a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #fff;
+    margin: 50px 0 0 0;
+    background-color: transparent;
+  }
+
+  .hovereffect a.info:hover {
+    box-shadow: 0 0 5px #fff;
+  }
+
+  .hovereffect .rotate {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  .hovereffect hr {
+    width: 50%;
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+
+  .hovereffect  hr:nth-child(2) {
+    -webkit-transform: translate3d(-50%,-50%,0) rotate(0deg) scale3d(0,0,1);
+    transform: translate3d(-50%,-50%,0) rotate(0deg) scale3d(0,0,1);
+  }
+
+  .hovereffect  hr:nth-child(3) {
+    -webkit-transform: translate3d(-50%,-50%,0) rotate(90deg) scale3d(0,0,1);
+    transform: translate3d(-50%,-50%,0) rotate(90deg) scale3d(0,0,1);
+  }
+
+  .hovereffect h2, .hovereffect hr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,-50%,0);
+    -webkit-transform-origin: 50%;
+    -ms-transform-origin: 50%;
+    transform-origin: 50%;
+    background-color: transparent;
+    margin: 0px;
+  }
+
+  .group1, .group2 {
+    left: 50%;
+    position: absolute;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,-50%,0);
+    -webkit-transform-origin: 50%;
+    -ms-transform-origin: 50%;
+    transform-origin: 50%;
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .group1 {
+    top: 40%;
+  }
+
+  .group2 {
+    top: 60%;
+  }
+
+  .hovereffect p {
+    width: 30%;
+    text-transform: none;
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  .hovereffect p a {
+    color: #fff;
+  }
+
+  .hovereffect p a:hover,
+  .hovereffect p a:focus {
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+  }
+  -webkit-transform: translate3d(-60px,-60px,0) rotate(45deg) scale(2);
+
+  .hovereffect  a i {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  .group1 a:first-child i {
+    transform: translate3d(-60px,-60px,0) rotate(45deg) scale(2);
+  }
+
+  .group1 a:nth-child(2) i {
+    -webkit-transform: translate3d(60px,-60px,0) rotate(45deg) scale(2);
+    transform: translate3d(60px,-60px,0)  rotate(45deg) scale(2);
+  }
+
+  .group2 a:first-child i {
+    -webkit-transform: translate3d(-60px,60px,0) rotate(45deg) scale(2);
+    transform: translate3d(-60px,60px,0) rotate(45deg) scale(2);
+  }
+
+  .group2 a:nth-child(2) i {
+    -webkit-transform: translate3d(60px,60px,0)  rotate(45deg) scale(2);
+    transform: translate3d(60px,60px,0)  rotate(45deg) scale(2);
+  }
+
+  .hovereffect:hover hr:nth-child(2) {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translate3d(-50%,-50%,0) rotate(0deg) scale3d(1,1,1);
+    transform: translate3d(-50%,-50%,0) rotate(0deg) scale3d(1,1,1);
+  }
+
+  .hovereffect:hover hr:nth-child(3) {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translate3d(-50%,-50%,0) rotate(90deg) scale3d(1,1,1);
+    transform: translate3d(-50%,-50%,0) rotate(90deg) scale3d(1,1,1);
+  }
+
+  .hovereffect:hover .group1 i:empty, .hovereffect:hover .group2 i:empty {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0) rotate(45deg) scale(1);
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+
+</style>
+<h1 class="w3-dark-grey w3-animate-opacity"><center><b><big>TOP SHOP</big> <small>ltd</small>.</b></center></h1>
+
+<body class="w3-black w3-container w3-animate-opacity">
+
+<div class="w3-container">
+<ul class="w3-navbar w3-card-2 w3-dark-grey">
+  <li><a class="w3-hover-black" href="Home Page.html#">Home</a></li>
+  <li class="w3-dropdown-hover">
+    <a class="w3-hover-black" href="Men's Page/Home M.html#">Men</a>
+    <div class="w3-dropdown-content w3-white w3-card-4">
+      <a class="w3-hover-black" href="Men's Page/Shirts M.html#">Shirts</a>
+      <a class="w3-hover-black" href="#" title="Coming soon!">Shoes</a>
+      <a class="w3-hover-black" href="#" title="Coming soon!">Wrist-watches</a>
+  <li class="w3-dropdown-hover">
+    <a class="w3-hover-black" href="Women's Page/Home W.html#">Women</a>
+    <div class="w3-dropdown-content w3-white w3-card-4">
+      <a class="w3-hover-black" href="#">Gowns</a>
+      <a class="w3-hover-black" href="#" title="Coming soon!">Bags</a>
+      <a class="w3-hover-black" href="#" title="Coming soon!">Heels</a>
+  <li class="w3-dropdown-hover">
+    <a class="w3-hover-black" href="Children's Page/Home C.html#">Children</a>
+    <div class="w3-dropdown-content w3-white w3-card-4">
+      <a class="w3-hover-black" href="#">Tops & Shorts</a>
+      <a class="w3-hover-black" href="#" title="Coming soon!">School Bags</a>
+      <a class="w3-hover-black" href="#" title="Coming soon!">Toys</a>
+  <li><a class="w3-hover-black" href="Customer Care Page.html#">Customer Care</a></li>
+  <li><a class="w3-hover-black" href="#">About</a></li>
+    </div>
+  </li>
+</ul>
+</div>
+
+<br>
+<br>
+<br>
+
+
+
+
+    <div class="hovereffect" style="width:1000px; height:500px;margin-left:150px;">
+        <img class="img-responsive" src="p4.jpg" alt="">
+            <div class="overlay">
+                <h2>OUR MISSION</h2>
+				<p>
+					Here at Top Shop believe in a world where you have total freedom to be you, without judgement.
+          To experiment.
+          To express yourself.
+          To be brave and grab life as the extraordinary adventure it is.
+          So we make sure everyone has an equal chance to discover all the amazing things they’re capable of – no matter who they are, where they’re from or what looks they like to boss.
+          We exist to give you the confidence to be whoever you want to be.
+				</p>
+      </div>
+
+    </div>
+
+<br><br><br><br>
+
+<div class="hovereffect" style="width:1000px; height:500px; margin-left:250px;">
+    <img class="img-responsive" src="photo-1445205170230-053b83016050.jpg" alt="">
+        <div class="overlay">
+            <center><h2>OUR BRAND</h2></center>
+    <p>
+      We don't do fashion like anyone else does fashion.
+      Our Top Shop Brands, created by our London design team,
+      look between the lines to bring you the freshest clothing, shoes, accessories and gifts.
+      When it comes to our curation of brands at Top Shop,
+      we select the best of those to give you the biggest variety,
+      amazing exclusives and coolest collaborations. And in case that wasn't enough,
+      we've also got a range of first-rate Face + Body products you can express yourself with, too.
+      There are no rules – just endless ways to be you.
+    </p>
+  </div>
+
+</div>
+
+<br><br><br><br>
+
+<div class="hovereffect" style="width:1000px; height:500px; margin-left:150px;">
+    <img class="img-responsive" src="p14.jpg" alt="">
+        <div class="overlay">
+            <center><h2>OUR FOUNDER</h2></center>
+    <p>
+      He goes by the name Aliyu Ismaila.
+      An under-graduate at Nile University studying Computer Science.
+      He devoted his time and passion in fashion to build this amazing online store
+      to offer utmost satisfaction to customers all around the globe.
+    </p>
+  </div>
+
+</div>
+
+<br><br><br><br>
+
+<div class="hovereffect" style="width:1000px; height:300px; margin-left:150px;">
+    <img class="img-responsive" src="images (1).jpg" alt="">
+        <div class="overlay">
+
+    <p>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-youtube"></i>
+      <i class="fas fa-phone"></i>
+    </p>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+</body>
+
+<br><br><br><br>
+<br>
+<br>
+<br>
+<br>
+
+<footer class="w3-container w3-dark-grey">
+ <p style="font-family:verdana;"> Created by: Aliyu Ismaila<br>
+  Contact information: <a href="mailto:aliyu.ismaila03@gmail.com">
+  aliyu.ismaila03@gmail.com</a>.<br>
+  <center>TOP SHOP</center> </p>
+</footer>
+
+</html>
